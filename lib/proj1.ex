@@ -1,5 +1,7 @@
 
 defmodule Proj1 do
+  # Takes input and senf the required inputs
+  # to the main functions (proj1)
   def time_val(n,k) do
     l = trunc(:math.sqrt(n))
     {time,_} = :timer.tc(Proj1, :proj1, [n,k,l])
@@ -7,6 +9,8 @@ defmodule Proj1 do
   end
 
   def proj1(n,k,l) do
+    # Spawns the scheduler id and the required 
+    # work units and calls them.
     values = Enum.to_list(1..trunc(n/l))
     scheduler_id = spawn(Scheduler, :res_loop,[])
     for j <- values do
