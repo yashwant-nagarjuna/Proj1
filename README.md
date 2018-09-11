@@ -17,7 +17,8 @@ time mix run lib/proj1.ex
 ```
 * For running the file for multiple outputs please `mix clean` and then run for multiple outputs.
 
-===========================================
+============================================================
+
 **Size of the work unit.**
 Three module are created.
 
