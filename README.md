@@ -1,6 +1,6 @@
 # COP5615 DOS Project-1
 
-# Student Name: Yashwant Nagarjuna Kuppa
+## Student Name: Yashwant Nagarjuna Kuppa
 ## UFID: 71814301
 ## No. of Group member(s): 1
 **Lucas Square Pyramid**
