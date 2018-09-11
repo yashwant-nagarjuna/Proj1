@@ -40,6 +40,7 @@ Work unit: Each actor gets `sqrt(n)` range of numbers to operate upon.
 $ mix run lib/proj1.ex 1000000 4
 Compiling three files (.ex)
 
+
 ```
 
 ```bash
