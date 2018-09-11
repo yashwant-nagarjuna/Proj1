@@ -1,4 +1,4 @@
-<h2 align = "center">  COP5615: DISTRIBUTED OPERATING SYSTEMS </h2>
+<h2 align = "center">  COP5615:    DISTRIBUTED OPERATING SYSTEMS </h2>
 <h2 align = "center" > Project-1 </h2>
 
 <p> <b>Submitted by: </b> <br/>
