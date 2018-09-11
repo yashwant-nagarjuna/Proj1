@@ -6,7 +6,7 @@ Student Name: Yashwant Nagarjuna Kuppa <br/>
 UFID: 7181-4301 <br/>
 No. of Group member(s): 1 <br/> </p>
 
-#### Running the application from command-line
+#### Instructions for running the application from command-line
 
 ```elixir
 mix run lib/proj1.ex arg1 arg2
@@ -16,18 +16,19 @@ mix run lib/proj1.ex arg1 arg2
 ``` elixir
 time mix run lib/proj1.ex
 ```
-* For running the file for multiple outputs run the command `mix clean` and then run for multiple outputs.
+**For running the file for multiple outputs run the command `mix clean` and then run for multiple outputs**
 
 ============================================================
 
 **Size of the work unit.** <br/>
 I calculated the size of subproblem by trying various different values and I observed that optimal performance is obtained at `sqrt(n)` number of processes.
 
-Three module are created.
+#### Files inside the project.
+Three module were created.
 
 1. `proj1.ex` -> This module takes in the user input `n`, `k` and divides the work among `sqrt(n)` actors. These actors will  be sent to the worker module to calculate the sum of the squares.
 2. `worker.ex` -> This module calculates the sum of the squares and determines if it is a perfect square. The result is sent as a message to the scheduler module.
-3. `scheduler.ex` -> This module takes the result from the worker module, prints the result and kills the process, returning the result.
+3. `scheduler.ex` -> This module takes the result from the worker module and kills the process after returning the result.
 
 Work unit: Each actor gets `sqrt(n)` range of numbers to operate upon.
 
@@ -38,6 +39,11 @@ Work unit: Each actor gets `sqrt(n)` range of numbers to operate upon.
 ```bash
 $ mix run lib/proj1.ex 1000000 4
 Compiling three files (.ex)
+
+```
+
+```bash
+$ time mix run lib/proj1.ex 1000000 4
 
 real 0m2.572s
 user 0m7.809s
@@ -52,8 +58,8 @@ Hence, # cores used in the computation = CPU time/real time = 3.13
 
 ```elixir
 mix run lib/proj1.ex 100000000 4
-[]
+
 ```
-Empty list.
+The result is an empty list since there are no perfect squares for `k = 4`
 
 ===========================================
